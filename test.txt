@@ -1,6 +1,2 @@
-vsw01.111eighthave.ny.cbone.comcast.net	juniper	0L	None
-cr02.sunnyvale.ca.ibone.comcast.net	cisco	1L	None
-pe01.9greatoaks.ca.ibone.comcast.net	cisco	1L	None
-
-
-
+router_name	       device_type(either Cisco or Juniper)	
+abc.router_name    cisco	
