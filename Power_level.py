@@ -19,6 +19,7 @@ def control(count, records):
             print ('Connection refused to ' + router_info[count][0])
             count += 1
             continue
+# Cisco NCS router
         if device_name == 'cisco_ios' and router_info[count][0][0].lower() == 'c':
             try:
                 cmd_output = net_connect.send_command("admin show environment power")
@@ -27,6 +28,7 @@ def control(count, records):
                 print ('Command cant be executed on ' + router_info[count][0])
                 count += 1
                 continue
+# Cisco ASR series router
         elif device_name == 'cisco_ios' and router_info[count][0][0].lower() == 'p':
             try:
                 cmd_output = net_connect.send_command("admin show environment power-supply")
@@ -42,7 +44,8 @@ def control(count, records):
 
 
 def router_list():
-    fo = open("routers.txt", 'r')
+# file which conatin the router names
+    fo = open("test.txt", 'r')
     temp_list = []
     str = fo.readline()
     while str:
